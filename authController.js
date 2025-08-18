@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('./user');
 const jwt = require('jsonwebtoken');
 
 const generateToken = (id) => {
@@ -61,4 +61,5 @@ exports.login = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: 'Server error' });
     }
+
 };
