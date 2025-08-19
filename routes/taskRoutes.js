@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const taskController = require('./taskController');
+const taskController = require('../controllers/taskController');
 const protect = require('./authMiddleware');
 
 router.use(protect);
@@ -12,4 +12,5 @@ router.delete('/:id', taskController.deleteTask);
 
 
 module.exports = router;
+
 
