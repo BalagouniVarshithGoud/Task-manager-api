@@ -1,4 +1,4 @@
-const Task = require('./task');
+const Task = require('../models/task');
 
 // Ensure all task operations are protected
 exports.getAllTasks = async (req, res) => {
@@ -61,4 +61,5 @@ exports.deleteTask = async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 };
+
 
